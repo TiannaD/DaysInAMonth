@@ -25,7 +25,7 @@ int main() {
 			if (month == 2) {
 				cout << months[month-1] << " has 29 days in the leap year of " << year << endl;
 			}
-			else if (month % 2 == 0) {
+			else if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) {
 				cout << months[month - 1] << " has 31 days in the leap year of " << year << endl;
 			}
 			else {
@@ -36,7 +36,7 @@ int main() {
 			if (month == 2) {
 				cout << months[month - 1] << " has 28 days in the year of " << year << endl;
 			}
-			else if (month % 2 == 0) {
+			else if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) {
 				cout << months[month - 1] << " has 31 days in the year of " << year << endl;
 			}
 			else {

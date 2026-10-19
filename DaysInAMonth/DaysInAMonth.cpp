@@ -21,32 +21,32 @@ int main() {
 
 	if (month > 0 && month <= 12) {
 		//if leap year
-		if (year % LEAP_YEAR == 0) {
+		if (year % LEAP_YEAR == 0 && year % 100 != 0 || year % 400 == 0) {
 			if (month == 2) {
-				cout << months[month-1] << " has 29 days in the leap year of " << year << endl;
+				cout << endl << months[month-1] << endl << "Days: " << "29 days" << endl << "Year: Leap year" << endl;
 			}
 			else if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) {
-				cout << months[month - 1] << " has 31 days in the leap year of " << year << endl;
+				cout << endl << months[month - 1] << endl << "Days: " << "31 days" << endl << "Year: Leap year" << endl;
 			}
 			else {
-				cout << months[month - 1] << " has 30 days in the leap year of " << year << endl;
+				cout << endl << months[month - 1] << endl << "Days: " << "30 days" << endl << "Year: Leap year" << endl;
 			}
 		}//if NOT leap year
 		else {
 			if (month == 2) {
-				cout << months[month - 1] << " has 28 days in the year of " << year << endl;
+				cout << endl << months[month - 1] << endl << "Days: " << "28 days" << endl << "Year: Common year" << endl;
 			}
 			else if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) {
-				cout << months[month - 1] << " has 31 days in the year of " << year << endl;
+				cout << endl << months[month - 1] << endl << "Days: " << "31 days" << endl << "Year: Common year" << endl;
 			}
 			else {
-				cout << months[month - 1] << " has 30 days in the year of " << year << endl;
+				cout << endl << months[month - 1] << endl << "Days: " << "30 days" << endl << "Year: Common year" << endl;
 			}
 		}
 
 	}
 	else {
-		cout << "Invalid response for Month.";
+		cout << "Invalid month." << endl;
 	}
 
 

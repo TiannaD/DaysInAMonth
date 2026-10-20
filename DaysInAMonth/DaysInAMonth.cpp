@@ -8,8 +8,10 @@ int month;
 int year;
 
 const int LEAP_YEAR = 4;
+const int CENTURY_CHECK1 = 100;
+const int CENTURY_CHECK2 = 400;
 
-string months[12] = { "January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
+string months[12] = { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
 
 int main() {
 
@@ -21,26 +23,26 @@ int main() {
 
 	if (month > 0 && month <= 12) {
 		//if leap year
-		if (year % LEAP_YEAR == 0 && year % 100 != 0 || year % 400 == 0) {
+		if (year % LEAP_YEAR == 0 && year % CENTURY_CHECK1 != 0 || year % CENTURY_CHECK2 == 0) {
 			if (month == 2) {
-				cout << endl << months[month-1] << endl << "Days: " << "29 days" << endl << "Year: Leap year" << endl;
+				cout << endl << months[month-1] << endl << "Days: 29 days" << endl << "Year: Leap year" << endl;
 			}
 			else if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) {
-				cout << endl << months[month - 1] << endl << "Days: " << "31 days" << endl << "Year: Leap year" << endl;
+				cout << endl << months[month - 1] << endl << "Days: 31 days" << endl << "Year: Leap year" << endl;
 			}
 			else {
-				cout << endl << months[month - 1] << endl << "Days: " << "30 days" << endl << "Year: Leap year" << endl;
+				cout << endl << months[month - 1] << endl << "Days: 30 days" << endl << "Year: Leap year" << endl;
 			}
 		}//if NOT leap year
 		else {
 			if (month == 2) {
-				cout << endl << months[month - 1] << endl << "Days: " << "28 days" << endl << "Year: Common year" << endl;
+				cout << endl << months[month - 1] << endl << "Days: 28 days" << endl << "Year: Common year" << endl;
 			}
 			else if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) {
-				cout << endl << months[month - 1] << endl << "Days: " << "31 days" << endl << "Year: Common year" << endl;
+				cout << endl << months[month - 1] << endl << "Days: 31 days" << endl << "Year: Common year" << endl;
 			}
 			else {
-				cout << endl << months[month - 1] << endl << "Days: " << "30 days" << endl << "Year: Common year" << endl;
+				cout << endl << months[month - 1] << endl << "Days: 30 days" << endl << "Year: Common year" << endl;
 			}
 		}
 
